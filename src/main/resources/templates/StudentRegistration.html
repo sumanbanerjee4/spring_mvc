@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Student Registration Form</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h3>Student Registration Form</h3>
+	<form action="#" th:action="@{/}" th:object="${student}" method="post">
+		<table>
+			<tr>
+				<td>FirstName:</td>
+				<td><input type="text" th:field="*{firstName}" /></td>
+				<td th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">Title error message</td>
+			</tr>
+			<tr>
+				<td>LastName:</td>
+				<td><input type="text" th:field="*{lastName}" /></td>
+				<td th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">Content error message</td>
+			</tr>
+			
+			<tr>
+				<td>Subject:</td>
+				<td><input type="text" th:field="*{subject}" /></td>
+				<td th:if="${#fields.hasErrors('subject')}" th:errors="*{subject}">Content error message</td>
+			</tr>
+			
+			<tr>
+				<td>Section:</td>
+				<td><input type="text" th:field="*{section}" /></td>
+				<td th:if="${#fields.hasErrors('section')}" th:errors="*{section}">Content error message</td>
+			</tr>
+			
+			<tr>
+				<td>Board:</td>
+				<td><input type="text" th:field="*{Board.boardName}" /></td>
+				<td th:if="${#fields.hasErrors('Board.boardName')}" th:errors="*{Board.boardName}">Content error message</td>
+			</tr>
+			
+			<tr>
+				<td>Address:</td>
+				<td><input type="text" th:field="*{Address.street}" /></td>
+				<td th:if="${#fields.hasErrors('Address.street')}" th:errors="*{Address.street}">Content error message</td>
+			</tr>
+			
+		<tr>
+				<td>Standard:</td>
+				<td><input type="text" th:field="*{Standard.name}" /></td>
+				<td th:if="${#fields.hasErrors('Standard.name')}" th:errors="*{Standard.name}">Content error message</td>
+			</tr>
+			<tr>
+				<td><button type="submit">Submit post</button></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

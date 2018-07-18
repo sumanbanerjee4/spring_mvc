@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>>Student Registration Form</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h3>Student Registration Form</h3>
+	<h4>First Name:</h4>
+	<p th:text="${student.firstName}" />
+	<h4>Last Name:</h4>
+	<p th:text="${student.lastName}" />
+ 	
+	<h4>Section:</h4>
+	<p th:text="${student.section}" />
+	
+	<h4>Board:</h4>
+	<p th:text="${student.board}" />
+	
+	<h4>Subject:</h4>
+	<p th:text="${student.subject}" />
+	
+	<h4>Address:</h4>
+	<p th:text="${student.address}" />
+	
+	<h4>Standard:</h4>
+	<p th:text="${student.standard}" />
+	 
+	
+</body>
+</html>
